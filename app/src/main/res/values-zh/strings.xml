@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">安卓谷歌培训</string>
+    <string name="action_settings">设置</string>
+    <string name="edit_message">请输入信息</string>
+    <string name="button_send">提交</string>
+    <string name="title_activity_display_message">信息详情</string>
+
+</resources>
