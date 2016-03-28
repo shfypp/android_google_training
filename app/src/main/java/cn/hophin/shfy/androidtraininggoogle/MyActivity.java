@@ -1,6 +1,8 @@
 package cn.hophin.shfy.androidtraininggoogle;
 
+import android.app.ActionBar;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -63,5 +65,19 @@ public class MyActivity extends AppCompatActivity {
         String message=editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
+    }
+
+    public void anotherActivity(View view){
+        Intent intent=new Intent(this,ForShowThemeActivity.class);
+        startActivity(intent);
+    }
+
+    /**check system version at runtime**/
+    private void setUpActionBar(){
+        //Make sure we're running on Honeycomb or higher to ActionBar APIs
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB){
+            ActionBar actionBar=getActionBar();
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 }
