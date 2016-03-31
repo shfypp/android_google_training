@@ -52,3 +52,9 @@ Start/Restart an Activity
 Recreating an Activity
     1.  To save additional state information for your activity,you must
         implement onSaveInstanceState() and add key-value pairs to the Bundle object.
+
+Add a Fragment to an Activity t Runtime
+    1.  If your activity allows the fragments to be removed and replaced,you should
+        add the initial fragment(s) to the activity during the activity's onCreate() method.
+    2.  To allow the user to navigate backward through the fragment transactions,you must
+        call addToBackStack() before you commit the FragmentTransaction.
