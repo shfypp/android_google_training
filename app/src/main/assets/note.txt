@@ -1,0 +1,54 @@
+Starting an Activity
+
+    1.  Lifecycle Callbacks
+        onCreate()      onStart()       onResume()
+                Created         Started           Resumed           Paused
+                                       visible          visible           partially visible
+
+         onPause()              onStop()            onDestroy
+                 Paused                 Stopped              Destoryed
+                       partially visible       hiden
+
+
+        onCreate()  -onStart()  -onResume() -onPause()  -onStop()       -onDestory()
+                                            -onResume()
+                                                        -onRestart()    -onStart()
+    2.  three states an activity can exist
+        Resumed
+        Pasued
+        Stopped
+
+Pausing an Activity
+
+    1.  You should usually use the onPause() callback to:
+        ●   Stop animations or other ongoing actions that could consume CPU.
+        ●   Commit unsaved changes,but only if users expect such changes to be permanently(永久地)
+            saved when they leave(such as a draft email)
+        ●   Release system resources,such as broadcast receiver,handles to sensors(传感器),
+            or any resources that may affect battery life while your activity is paused
+            and the user dose not need them.
+    2.  You should avoid performing CPU-intensive work during onPause(),such as
+        writing to a database,because it can show the visible transition to the next activity(
+        you should instead perform heavy-load shutdown operations during onStop())
+
+Resuming an Activity
+    1.  You should implement onResume() to initialize components that you release during onPause()
+        and perform any other initialization that must occur each time the activity
+        enters the Resumed state(such as begin animations and initialize components
+        only used while the activity has user focus)
+
+Stopping an Activity
+    1.  Although the onPause() method is called before onStop(),you should use onStop()
+        to perform lager、more CPU intensive shut-down operations, such as
+        writing information to a database.
+    2.  Even if the system destroys your activity while it's stopped,it still retains
+        the state of the View objects(such as text in an EditText) in a Bundle
+
+Start/Restart an Activity
+    1.  The onRestart() method is called only when the activity resumes from the stopped state,
+        so you can use it to perform special restoration work that might be necessary
+        only if the activity was previously stopped, but not destroyed.
+
+Recreating an Activity
+    1.  To save additional state information for your activity,you must
+        implement onSaveInstanceState() and add key-value pairs to the Bundle object.
