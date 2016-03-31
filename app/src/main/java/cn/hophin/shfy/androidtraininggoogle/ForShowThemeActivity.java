@@ -17,8 +17,8 @@ public class ForShowThemeActivity extends Activity {
 
         TextView textView = new TextView(this);
         textView.setTextSize(40);
-        textView.setText("透明背景的Activity");
-//        textView.setText("像对话框一样的Activity");
+//        textView.setText("透明背景的Activity");
+        textView.setText("像对话框一样的Activity");
 
         relativeLayout.addView(textView);
 

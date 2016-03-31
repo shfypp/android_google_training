@@ -6,5 +6,6 @@
     <string name="title_activity_display_message">信息详情</string>
     <string name="title_activity_show_theme">主题样式</string>
     <string name="button_send_2">测试样式</string>
+    <string name="button_send_3">学习Fragment</string>
 
 </resources>

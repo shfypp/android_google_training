@@ -93,6 +93,12 @@ public class MyActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    public void learnFragment(View view){
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
     /**check system version at runtime**/
     private void setUpActionBar(){
         //Make sure we're running on Honeycomb or higher to ActionBar APIs
