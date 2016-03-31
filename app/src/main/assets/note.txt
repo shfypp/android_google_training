@@ -58,3 +58,13 @@ Add a Fragment to an Activity t Runtime
         add the initial fragment(s) to the activity during the activity's onCreate() method.
     2.  To allow the user to navigate backward through the fragment transactions,you must
         call addToBackStack() before you commit the FragmentTransaction.
+
+Communicating with Other Fragments
+    1.  All Fragment-to-Fragment communication is done through the associated Activity.
+        Two Fragments should never communicate directly.
+    2.  To allow a Fragment to communicate up to tis Activity,you can define an interface
+        in the Fragment class and implement it within the Activity.
+
+Deliver a Message to a Fragment
+    1.  The host activity can deliver messages to a fragment by capturing the Fragment instance
+        with findFragmentById(),then directly call the fragment's public methods.
