@@ -4,5 +4,13 @@
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
     <string name="title_activity_display_message">MyMessage</string>
+    <string name="title_activity_show_theme">ShowTheme</string>
+    <string name="button_send_2">Theme</string>
+    <string name="button_send_3">FragmentDemo</string>
+    <string name="button_save_key_values">TestSave</string>
+    <string name="title_activity_save_key_value">SaveKeyValueActivity</string>
+    <string name="shared_pres">cn.hophin.shfy.androidtraininggoogle.sharedpres</string>
+    <string name="user_name_key">user_name</string>
 
 </resources>
+

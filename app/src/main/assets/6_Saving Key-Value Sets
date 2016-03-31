@@ -1,0 +1,14 @@
+Saving Data
+    1.  The principal data storage options in Android,including:
+        ●   Saving key-value pairs of simple data types in a shared preferences file
+        ●   Saving arbitrary files in Android's file system
+        ●   Using databases managed by SQLite
+Saving Key-Value Sets
+    1.  You can create a new shared preference file or access an existing one by
+        calling one of two methods:
+        ●   getSharePreferences()-Use this if you need multiple shared preference files
+            identified by name,which you specify with the first parameter.You can call this
+            from any Context in your app.
+        ●   getPreferences()-Use this from an Activity if you need to use only one shared
+            preference file for the activity.Because this retrieves a defaults shared preference
+            file that belongs to the activity,you don't need to supply a name.

@@ -7,5 +7,9 @@
     <string name="title_activity_show_theme">主题样式</string>
     <string name="button_send_2">测试样式</string>
     <string name="button_send_3">学习Fragment</string>
+    <string name="button_save_key_values">保存键值对</string>
+    <string name="shared_pres">cn.hophin.shfy.androidtraininggoogle.sharedpres</string>
+
+
 
 </resources>

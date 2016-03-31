@@ -8,6 +8,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -38,15 +42,22 @@
             android:label="@string/title_activity_show_theme"
             android:parentActivityName=".MyActivity"
             android:theme="@android:style/Theme.Dialog">
-            <!--android:theme="@android:style/Theme.Translucent">-->
+
+            <!-- android:theme="@android:style/Theme.Translucent"> -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cn.hophin.shfy.androidtraininggoogle.MyActivity" />
         </activity>
-        <activity android:name=".MainActivity">
-
+        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".SaveKeyValueActivity"
+            android:label="@string/title_activity_save_key_value"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.hophin.shfy.androidtraininggoogle.MyActivity" />
         </activity>
-
     </application>
 
 </manifest>

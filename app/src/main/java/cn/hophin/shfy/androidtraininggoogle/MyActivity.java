@@ -3,6 +3,7 @@ package cn.hophin.shfy.androidtraininggoogle;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.hardware.Camera;
 import android.location.LocationManager;
 import android.os.Build;
@@ -11,6 +12,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +24,8 @@ public class MyActivity extends AppCompatActivity {
     private Camera mCamera;
     private int mCurrentScore;
     private int mCurrentLevel;
+
+    private EditText userNameEtv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,8 @@ public class MyActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        userNameEtv= (EditText) findViewById(R.id.user_name_etv);
     }
 
     @Override
@@ -95,7 +101,21 @@ public class MyActivity extends AppCompatActivity {
 
 
     public void learnFragment(View view){
+
         Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void saveKeyValues(View view){
+        System.out.println("here");
+        if (!TextUtils.isEmpty(userNameEtv.getText())) {
+            String userName=userNameEtv.getText().toString();
+            SharedPreferences sharedPreferences=getSharedPreferences(getResources().getString(R.string.shared_pres), Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor=sharedPreferences.edit();
+            editor.putString(getResources().getString(R.string.user_name_key),userName);
+            editor.commit();
+        }
+        Intent intent=new Intent(this,SaveKeyValueActivity.class);
         startActivity(intent);
     }
 

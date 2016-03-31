@@ -18,25 +18,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendMessage"
-        android:text="@string/button_send" />
+        android:text="@string/button_send"
+        android:textAllCaps="false" />
+
     <View
-        android:background="@android:color/darker_gray"
         android:layout_width="match_parent"
-        android:layout_height="1sp"/>
-     <Button
+        android:layout_height="1sp"
+        android:background="@android:color/darker_gray" />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="anotherActivity"
-        android:text="@string/button_send_2" />
+        android:text="@string/button_send_2"
+        android:textAllCaps="false" />
+
     <View
-        android:background="@android:color/darker_gray"
         android:layout_width="match_parent"
-        android:layout_height="1sp"/>
+        android:layout_height="1sp"
+        android:background="@android:color/darker_gray" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="learnFragment"
-        android:text="@string/button_send_3" />
+        android:text="@string/button_send_3"
+        android:textAllCaps="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@android:color/darker_gray" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/user_name_etv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="saveKeyValues"
+            android:text="@string/button_save_key_values"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
 
 
 
